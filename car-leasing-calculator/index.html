@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Leasing Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Car Leasing Calculator</h1>
+        <form id="leasing-form">
+            <div class="flex-container">
+                <div class="group-container">
+                    <div class="form-group">
+                        <label for="car-type">Car Type:</label>
+                        <select id="car-type">
+                            <option value="brand-new">Brand New</option>
+                            <option value="used">Used</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="car-value">Car Value (€10,0000 - €200,000):</label>
+                        <input type="text" id="car-value-display">
+                        <input type="range" id="car-value" min="10000" max="200000" step="1000" value="10000">
+                    </div>
+                </div>
+                <div class="group-container">
+                    <div class="form-group">
+                        <label for="lease-period">Lease Period (months):</label>
+                        <select id="lease-period">
+                            <option value="12">12</option>
+                            <option value="24">24</option>
+                            <option value="36">36</option>
+                            <option value="48">48</option>
+                            <option value="60">60</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="down-payment">Down Payment (10% - 50%):</label>
+                        <input type="text" id="down-payment-value" min="10" max="50">
+                        <input type="range" id="down-payment" min="10" max="50" step="5" value="10">
+                    </div>
+                </div>
+            </div>
+        </form>
+        <hr class="divider">
+        <div id="result">
+            <h2>Leasing Details </h2>  
+            <div class="flex-container">
+                <div class="group-container">
+                    <p>Total Leasing Cost: €<span id="total-leasing-cost">0.00</span></p>
+                    <p>Down Payment: €<span id="down-payment-amount">0.00</span></p>
+                </div>
+                <div class="vertical-divider"></div>
+                <div class="group-container">
+                    <p>Monthly installment: €<span id="monthly-payment">0.00</span></p>
+                    <p>Interest Rate: <span id="interest-rate">0.00</span>%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

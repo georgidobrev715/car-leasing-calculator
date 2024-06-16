@@ -1,0 +1,140 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #00796b;
+    font-size: 32px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #00796b;
+}
+
+input[type="number"],
+select,
+input[type="range"] {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    height: 30px;
+    width: calc(100% - 15px);
+    margin-bottom: 30px;
+    padding-left: 10px;
+
+}
+
+select{
+    height: 35px;
+    padding-left: 10px;
+}
+
+span {
+    color: #00796b;
+    font-weight: bold;
+}
+
+#result {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#result h2 {
+    margin-bottom: 20px;
+    color: #00796b;
+    font-size: 26px;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.group-container {
+    flex: 1;
+}
+
+hr.divider {
+    border: none;
+    border-top: 1px solid #000;
+    margin: 20px 0;
+}
+
+.vertical-divider {
+    width: 1px;
+    background-color: #000;
+    height: auto;
+    margin: 0 20px;
+}
+
+@media (max-width: 768px) {
+    body{
+        height: auto;
+    }
+
+    h1{
+        font-size: 30px
+    }
+
+    .container {
+        padding: 20px;
+        max-width: 400px;
+        width: 100%;
+    }
+    
+    .flex-container {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #result{
+        text-align: left;
+    }
+
+    #result p{
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    #result .group-container{
+        margin-top:5px;
+        margin-bottom: 5px;
+    }
+
+    #result h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    #result .flex-container{
+        align-items: flex-start;
+    }
+}
